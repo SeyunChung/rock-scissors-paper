@@ -1,3 +1,6 @@
+<img width="1512" alt="image" src="https://github.com/SeyunChung/rock-scissors-paper/assets/119281933/859dedd9-dbc3-4f87-b78d-8518c6534684">
+
+# Getting Started with Create React App
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
