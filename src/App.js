@@ -2,12 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import Box from "./component/Box";
 
-// 1. 박스 2개 (타이틀,사진, 결과)
-//2. 가위 바위 보 버튼이 있다
-//3. 버튼을 클릭하면 클릭한 값이 박스에 보임
-//4.컴퓨터는 랜덤하게 아이템 선택이 된다
-//5. 3 4 의 결과를 가지고 누가 이겼는지 승패를 따진다
-//6. 승패결과에따라 테두리 색이 바뀐다 (이기면-초록, 지면-빨강 비기면-검은색)
+// 1. Two boxes (title, picture, result)
+// 2. There are rock-paper-scissors buttons.
+// 3. When a button is clicked, the clicked value is displayed in the box.
+// 4. The computer randomly selects an item.
+// 5. The winner is determined based on the results of steps 3 and 4.
+// 6. The border color changes according to the result (green for win, red for lose, black for draw).
 
 const choice = {
   rock: {
@@ -45,13 +45,13 @@ function App() {
   const judgement = (user, computer) => {
     console.log("user", user, "computer", computer);
 
-    // user == computer tie
-    // user == rock, computer == "scissors" user 이긴거지
-    // user == "rock" computer == paper   user 진거지
-    // user == scissors computer paper    user 이긴거지
-    // user == scissors computer rock     user 진거지
-    // user == paper computer rock   user 이긴거지
-    // user paper computer scissors user 진거지
+// user == computer                       tie
+// user == rock, computer == scissors     user wins
+// user == rock, computer == paper        user loses
+// user == scissors, computer == paper    user wins
+// user == scissors, computer == rock     user loses
+// user == paper, computer == rock        user wins
+// user == paper, computer == scissors    user loses
 
     if (user.name == computer.name) {
       return "tie";
@@ -69,9 +69,9 @@ function App() {
         <Box title="Computer" item={computerSelect} result={result} />
       </div>
       <div className="main">
-        <button onClick={() => play("scissors")}>가위</button>
-        <button onClick={() => play("rock")}>바위</button>
-        <button onClick={() => play("paper")}>보</button>
+        <button onClick={() => play("scissors")}>Scissors</button>
+        <button onClick={() => play("rock")}>Rock</button>
+        <button onClick={() => play("paper")}>Paper</button>
       </div>
     </div>
   );
